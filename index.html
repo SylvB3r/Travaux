@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Services - Bricolage & Petits Travaux à Domicile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Ahmed Services</h1>
+        <p>Votre spécialiste pour tous vos petits travaux, bricolage et dépannages du quotidien.</p>
+        <div class="badge-location">📍 Intervention sur Angers et alentours (20 km)</div>
+        <div style="margin-top: 20px;">
+            <a href="#devis" class="btn">Demander un devis gratuit</a>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- Engagement & Présentation -->
+        <div class="card" style="text-align: center;">
+            <h2>Un travail propre, rapide et soigné</h2>
+            <p>Indépendant et réactif, je vous accompagne dans tous les petits travaux de la maison pour lesquels les entreprises de bâtiment ne se déplacent pas. Devis clair avant chaque intervention.</p>
+        </div>
+
+        <!-- Grille des Prestations -->
+        <div class="card">
+            <h2>Mes Prestations</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🪚</div>
+                    <h3>Bricolage & Montage</h3>
+                    <p>Montage de meubles en kit, pose d'étagères, fixations TV, tringles à rideaux.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚰</div>
+                    <h3>Petite Plomberie</h3>
+                    <p>Remplacement de robinetterie, changement de joints, débouchage, pose de lave-linge.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Électricité simple</h3>
+                    <p>Changement d'interrupteurs, prises, installation de luminaires et lustres.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Peinture & Finitions</h3>
+                    <p>Retouches peinture, rebouchage de trous, joints silicone salle de bain/cuisine.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarifs indicatifs -->
+        <div class="card">
+            <h2>Tarifs indicatifs</h2>
+            <p>Tarifs transparents établis à l'heure ou au forfait selon le chantier :</p>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Prestation</th>
+                        <th>Tarif indicatif (HT)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Taux horaire (première heure)</td>
+                        <td>40 €</td>
+                    </tr>
+                    <tr>
+                        <td>Heure supplémentaire entamée</td>
+                        <td>30 €</td>
+                    </tr>
+                    <tr>
+                        <td>Frais de déplacement (Angers & 10 km)</td>
+                        <td>Inclus / 15 € au-delà</td>
+                    </tr>
+                    <tr>
+                        <td>Forfait petit chantier (ex: montage 1 meuble)</td>
+                        <td>Sur devis personnalisé</td>
+                    </tr>
+                </tbody>
+            </table>
+            <small style="color: #64748b;">* Statut auto-entrepreneur : TVA non applicable, art. 293 B du CGI.</small>
+        </div>
+
+        <!-- Formulaire de Devis / Contact -->
+        <div class="card" id="devis">
+            <h2>Demande de devis / Contact</h2>
+            <p>Décrivez brièvement votre besoin, je vous recontacte sous 24h :</p>
+            
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="VOTRE_CLE_WEB3FORMS">
+                <input type="hidden" name="subject" value="Demande de devis - Ahmed Services">
+
+                <div class="form-group">
+                    <label for="name">Nom et Prénom :</label>
+                    <input type="text" id="name" name="name" placeholder="Ex: Marc Martin" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Téléphone :</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Ex: 06 12 34 56 78" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="type">Type d'intervention :</label>
+                    <select id="type" name="type">
+                        <option value="bricolage">Bricolage / Montage de meuble</option>
+                        <option value="plomberie">Petite plomberie</option>
+                        <option value="electricite">Électricité</option>
+                        <option value="peinture">Peinture / Rénovation</option>
+                        <option value="autre">Autre demande</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Description de vos travaux :</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Précisez ce qu'il y a à faire (ex: poser 3 étagères et changer un robinet)..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn" style="width: 100%;">Envoyer la demande</button>
+            </form>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Ahmed Services - Auto-entrepreneur | Angers</p>
+    </footer>
+
+</body>
+</html>
